@@ -1,0 +1,72 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #ffffff; /* texto blanco */
+  background-color: #000000; /* fondo negro fijo */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #ffffff; /* enlaces blancos */
+  text-decoration: none;
+}
+a:hover {
+  color: #d6336c; /* hover rosado para contraste */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #000000; /* asegura fondo negro */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #ffffff; /* títulos blancos */
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #000000; /* fondo negro */
+  color: #ffffff; /* texto blanco */
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s;
+}
+button:hover {
+  border-color: #d6336c;
+  color: #d6336c;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto #d6336c;
+}
+
+.card {
+  padding: 2em;
+  background-color: #111111; /* gris muy oscuro para contraste */
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
