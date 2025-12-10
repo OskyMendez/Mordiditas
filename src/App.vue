@@ -1,32 +1,31 @@
 <template>
   <div class="app">
-    <!-- Contenedor superior con logo y menú -->
-    <section class="hero">
-      <!-- Logo grande -->
-      <div class="logo-container">
-        <img 
-          src="/logo.png.png" 
-          alt="Logo Mordiditas" 
-          class="logo-img" 
-        />
-      </div>
+    <!-- Logo arriba -->
+    <div class="logo-container">
+      <img 
+        src="/mordiditas2.jpg"
+        alt="Logo Mordiditas" 
+        class="logo-img" 
+      />
+    </div>
+      <!-- Mensaje de bienvenida -->
 
-      <!-- Menú vertical -->
-      <nav class="nav-vertical">
-        <ul>
-          <li><a href="#" @click="playSound('ladrido')">Inicio</a></li>
-          <li><a href="#" @click="playSound('maullido')">Productos</a></li>
-          <li><a href="#" @click="playSound('pitido')">Contacto</a></li>
-          <li><a href="#" @click="playSound('maullido')">Quienes somos</a></li>
-        </ul>
-      </nav>
-    </section>
 
-    <!-- Mensaje de bienvenida -->
-    <main class="main">
-      <h1 class="bienvenida">🐾 Bienvenido a Mordiditas 🐾</h1>
-      <p class="subtexto">Tu lugar para productos únicos, divertidos y llenos de personalidad</p>
-    </main>
+    <!-- Menú horizontal debajo del logo -->
+    <nav class="nav-horizontal">
+      <ul>
+        <li><a href="#" @click="playSound('ladrido')">Inicio</a></li>
+        <li><a href="#" @click="playSound('maullido')">Productos</a></li>
+        <li><a href="#" @click="playSound('pitido')">Contacto</a></li>
+        <li><a href="#" @click="playSound('maullido')">Quienes somos</a></li>
+      </ul>
+    </nav>
+    <div class="footer-img">
+  <img src="/public/footer.png.png" alt="Imagen inferior Mordiditas" />
+</div>
+
+
+  
   </div>
 </template>
 
@@ -48,91 +47,85 @@ function playSound(tipo) {
 <style scoped>
 .app {
   font-family: 'Poppins', Arial, sans-serif;
-  background: #000; /* fondo negro */
+  background: url('/fondo.jpg.jpg') no-repeat center center fixed;
+  background-size: cover; /* hace que la imagen ocupe toda la pantalla */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Contenedor superior ocupa toda la pantalla */
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6rem;
-  height: 100vh;
-  width: 100%;
-}
 
-/* Logo grande a la izquierda */
+/* Logo arriba */
 .logo-container {
-  flex: 1;
+  margin-top: 2rem;
+  width: 100%; /* que ocupe todo el ancho */
   display: flex;
   justify-content: center;
 }
 
 .logo-img {
-  height: 400px;
-  width: auto;
-  border-radius: 50%;
-  border: 10px solid #fff; /* borde blanco para contraste */
+  width: 90%; /* ocupa el 90% del ancho de la pantalla */
+  max-width: 800px; /* límite máximo para que no se deforme en pantallas grandes */
+  height: auto;
+  border: 12px solid #000000; /* borde negro */
   transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
-  transform: scale(1.1) rotate(10deg);
+  transform: scale(1.02) rotate(3deg);
 }
 
-/* Menú vertical ocupa gran parte a la derecha */
-.nav-vertical {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.nav-vertical ul {
+/* Menú horizontal */
+.nav-horizontal ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-vertical li {
   margin: 2rem 0;
+  padding: 0;
+  display: flex;
+  gap: 3rem; /* espacio entre secciones */
 }
-
-.nav-vertical a {
+.nav-horizontal a {
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #fff; /* letras blancas */
+  color: #ed1c70; /* fucsia */
   transition: color 200ms ease;
 }
-
-.nav-vertical a:hover {
-  color: #d6336c; /* efecto hover rosado */
+.nav-horizontal a:hover {
+  color: #8c52ff; /* violeta */
 }
 
-/* Mensaje de bienvenida debajo */
 .main {
   margin: 3rem 0;
   text-align: center;
+  background: #8c52ff; /* lila */
+  color: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px; /* bordes suaves, no tan redondeados */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* sombra más difusa */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* borde tenue tipo brillo */
+  backdrop-filter: blur(2px); /* efecto de suavizado si hay fondo detrás */
+  transition: all 0.3s ease;
 }
 
 .bienvenida {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #fff; /* blanco */
+  color: #0e0e0e;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(255,255,255,0.2);
+ 
+}
+.footer-img {
+  width: 200%;
+  margin-top: auto;
 }
 
-.subtexto {
-  font-size: 1.4rem;
-  color: #ccc; /* gris claro para contraste */
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+.footer-img img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
+
 </style>

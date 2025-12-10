@@ -3,8 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: #ffffff; /* texto blanco */
-  background-color: #000000; /* fondo negro fijo */
+  color: #000000; /* texto negro por defecto */
+  background-color: #ffffff; /* fondo blanco fijo */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,11 +14,11 @@
 
 a {
   font-weight: 500;
-  color: #ffffff; /* enlaces blancos */
+  color: #ed1c70; /* enlaces fucsia */
   text-decoration: none;
 }
 a:hover {
-  color: #d6336c; /* hover rosado para contraste */
+  color: #8c52ff; /* hover violeta */
 }
 
 body {
@@ -27,41 +27,44 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000000; /* asegura fondo negro */
+  background: url('/fondo.jpg.jpg') no-repeat center center fixed;
+  background-size: cover; /* hace que la imagen ocupe toda la pantalla */
 }
+
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #ffffff; /* títulos blancos */
+  color: #ed1c70; /* títulos fucsia */
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid #ffffff;
+  border: 1px solid #ed1c70; /* borde fucsia */
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #000000; /* fondo negro */
-  color: #ffffff; /* texto blanco */
+  background-color: #ffffff; /* fondo blanco */
+  color: #ed1c70; /* texto fucsia */
   cursor: pointer;
   transition: border-color 0.25s, color 0.25s;
 }
 button:hover {
-  border-color: #d6336c;
-  color: #d6336c;
+  border-color: #8c52ff; /* borde violeta al hover */
+  color: #8c52ff; /* texto violeta al hover */
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto #d6336c;
+  outline: 4px auto #8c52ff; /* foco violeta */
 }
 
 .card {
   padding: 2em;
-  background-color: #111111; /* gris muy oscuro para contraste */
-  color: #ffffff;
+  background-color: #f9f9f9; /* gris claro para contraste sobre blanco */
+  color: #000000; /* texto negro */
   border-radius: 8px;
+  border: 1px solid #ed1c70; /* borde fucsia */
 }
 
 #app {
